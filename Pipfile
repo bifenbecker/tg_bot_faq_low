@@ -1,0 +1,30 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+uvloop = "*"
+loguru = "*"
+python-dotenv = "*"
+pydantic = "*"
+babel = "*"
+aiogram = {version = "==3.0.0b9", extras = ["i18n"]}
+alembic = "*"
+asyncpg = "*"
+pydantic-settings = "*"
+dependency-injector = {extras = ["pydantic-settings"], version = "*"}
+sqlalchemy = {extras = ["asyncio"], version = "*"}
+pytest = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+start = "python main.py"
+seed = "python scripts/run_seeds.py"
+migrate = "alembic upgrade head"
+manual_migration = "alembic revision -m"
+auto_migration = "alembic revision --autogenerate"

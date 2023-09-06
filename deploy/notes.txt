@@ -1,0 +1,59 @@
+# postgres monitoring
+https://github.com/prometheus-community/postgres_exporter
+
+# docker postgres
+https://hub.docker.com/_/postgres
+
+# pg admin
+https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html
+
+#  docker secrets
+https://docs.docker.com/compose/use-secrets/
+
+# pgbouncer
+https://github.com/edoburu/docker-pgbouncer/blob/master/examples/docker-compose/docker-compose.yml
+
+http://www.pgbouncer.org/config.html#authentication-file-format
+
+http://www.pgbouncer.org/config.html
+
+https://hub.docker.com/r/edoburu/pgbouncer/
+# Discuss
+https://dba.stackexchange.com/questions/36828/how-to-best-use-connection-pooling-in-sqlalchemy-for-pgbouncer-transaction-level
+# Chat GPT
+You're correct that when using a connection pooler like pgbouncer, the need for setting the pool_size parameter in SQLAlchemy's engine configuration might seem counterintuitive.
+Let's clarify the purpose of pool_size and its interaction with connection pooling provided by pgbouncer.
+When you're using pgbouncer as a connection pooler, it manages the connection pooling outside of your application, handling the actual connections to the PostgreSQL server.
+This means that pgbouncer is responsible for managing the pool of connections and distributing them to various clients.
+In SQLAlchemy, the pool_size parameter is used to set the maximum number of connections that can be in the SQLAlchemy connection pool that your application manages.
+This pool is distinct from the connection pool managed by pgbouncer.
+So, why might you still want to set pool_size in SQLAlchemy when using pgbouncer?
+
+Application-Level Pool: SQLAlchemy's connection pool (pool_size) is a local pool managed by your application.
+It helps manage connections that are in use by your application code before they are handed off to pgbouncer.
+While pgbouncer handles the connections to the database server, the local SQLAlchemy pool can manage connections closer to your application code,
+improving efficiency and reducing the need for frequent connections to be established and torn down.
+
+Mitigating Burst Load: While pgbouncer is excellent at managing connections to the database server,
+your application can sometimes experience sudden bursts of activity that require multiple connections at once.
+Having a local connection pool (pool_size) can help your application handle these bursts more efficiently by providing readily available connections from the pool,
+without having to wait for pgbouncer to allocate a new connection.
+
+Balancing Resource Usage: Setting an appropriate pool_size in SQLAlchemy allows you to balance the number of connections
+your application uses against the capacity of pgbouncer and the database server.
+This can help prevent overloading any of these components.
+
+In summary, even when using pgbouncer as a connection pooler, setting an appropriate pool_size in SQLAlchemy's engine configuration can still provide benefits at the application level. However, the exact value for pool_size will depend on factors like the expected load on your application, the capacity of pgbouncer and the database server, and your application's connection usage patterns. It's important to monitor and tune these parameters based on your application's performance and resource requirements.
+# -----------------------
+
+# redis
+
+https://hub.docker.com/_/redis
+
+https://dev.to/zsevic/postgres-and-redis-containers-with-docker-compose-58hk
+
+# PGAdmin instructions
+1. login via credentials from pg admin container
+2. connect to server postgres where
+    1. host - name of postgres container
+    2. other cred as in postgres container configurations
