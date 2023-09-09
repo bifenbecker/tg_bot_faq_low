@@ -1,11 +1,7 @@
-from pydantic_settings import BaseSettings
-from pydantic_settings import SettingsConfigDict
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class BotSettings(BaseSettings):
     TOKEN: str
 
-    class Config:
-        env_prefix = "BOT__"
-
-    # model_config = SettingsConfigDict(env_prefix="BOT__", case_sensitive=False)
+    model_config = SettingsConfigDict(env_prefix="BOT__", case_sensitive=False)

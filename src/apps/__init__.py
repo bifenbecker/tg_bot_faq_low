@@ -1,5 +1,3 @@
 from .example import ExampleContainer
 
-__all__ = (
-    ExampleContainer
-)
+__all__ = ExampleContainer

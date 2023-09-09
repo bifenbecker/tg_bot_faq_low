@@ -2,8 +2,8 @@ from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from .bot import BotSettings
-from .storages import StorageSettings
 from .project import ProjectSettings
+from .storages import StorageSettings
 
 
 class Settings(BaseSettings):
@@ -11,4 +11,4 @@ class Settings(BaseSettings):
     bot: BotSettings = Field(validation_alias="BOT")
     project: ProjectSettings = Field(validation_alias="PROJECT")
 
-    model_config = SettingsConfigDict(env_file='./config/env/.env', env_nested_delimiter='__', case_sensitive=False)
+    model_config = SettingsConfigDict(env_file="./config/env/.env", env_nested_delimiter="__", case_sensitive=False)

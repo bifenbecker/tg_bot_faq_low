@@ -1,5 +1,6 @@
-from dependency_injector import containers, providers
 from aiogram import Bot, Dispatcher
+from dependency_injector import containers, providers
+
 from .director import Director
 
 
@@ -8,13 +9,6 @@ class DirectorContainer(containers.DeclarativeContainer):
 
     bot = providers.Singleton(Bot, token=config.TOKEN)
 
-    dispatcher = providers.Singleton(
-        Dispatcher
-    )
+    dispatcher = providers.Singleton(Dispatcher)
 
-    director = providers.Singleton(
-        Director,
-        dispatcher,
-        bot
-    )
-
+    director = providers.Singleton(Director, dispatcher, bot)

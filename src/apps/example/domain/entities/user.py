@@ -1,5 +1,6 @@
-from src.core import Base
 import sqlalchemy as sa
+
+from src.core import Base
 
 
 class User(Base):

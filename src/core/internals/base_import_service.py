@@ -1,5 +1,6 @@
 from glob import glob
 from importlib import import_module
+
 from loguru import logger
 
 
@@ -11,6 +12,7 @@ class BaseImportService:
     Thus all folders from which items have to be imported
     should have __init__.py file with __all__ variable.
     """
+
     TARGET_FOLDER = "apps"
     TARGET_SUBFOLDERS = None
     NOT_CHECKED_MESSAGE = "is not checked for items"
@@ -25,8 +27,9 @@ class BaseImportService:
         # module_name = module_name[:-1]
         module_name = module_name.replace("/", ".")
         target_module = import_module(module_name)
-        module_items = [{"name": item_name, "value": getattr(target_module, item_name)}
-                        for item_name in target_module.__all__]
+        module_items = [
+            {"name": item_name, "value": getattr(target_module, item_name)} for item_name in target_module.__all__
+        ]
         return module_items
 
     @classmethod
@@ -38,7 +41,7 @@ class BaseImportService:
         if not subfolders:
             raise Exception("Define 'subfolders'")
 
-        return glob(f'src/{cls.TARGET_FOLDER}/**/{subfolders}', recursive=True)
+        return glob(f"src/{cls.TARGET_FOLDER}/**/{subfolders}", recursive=True)
 
     @classmethod
     def get_items(cls, target_subfolders=None, not_checked_message=None) -> list[dict]:

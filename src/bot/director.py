@@ -1,10 +1,12 @@
 from aiogram import Bot, Dispatcher
 
 
-
 class Director:
-
-    def __init__(self, dispatcher: Dispatcher, *bots: Bot, ):
+    def __init__(
+        self,
+        dispatcher: Dispatcher,
+        *bots: Bot,
+    ):
         self.__bots = bots
         self.__dispatcher = dispatcher
 

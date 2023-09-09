@@ -1,5 +1,3 @@
 from .orm import Base
 
-__all__ = (
-    Base
-)
+__all__ = Base

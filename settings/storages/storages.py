@@ -1,9 +1,7 @@
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic_settings import BaseSettings
+
 from .db import DatabaseSettings
-from .redis import RedisSettings
 
 
 class StorageSettings(BaseSettings):
     db: DatabaseSettings
-    # redis: RedisSettings
-

@@ -1,5 +1,6 @@
 from abc import ABCMeta
-from typing import TypeVar, Generic
+from typing import Generic, TypeVar
+
 from ..storages.db import Base as BaseModel
 
 StorageType = TypeVar("StorageType")
