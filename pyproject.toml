@@ -23,3 +23,4 @@ no_implicit_optional = true
 warn_return_any = true
 warn_unused_ignores = true
 follow_imports = 'skip'
+exclude = ['venv', '.venv']

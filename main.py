@@ -1,8 +1,10 @@
 import asyncio
 import sys
+
 import uvloop
 from dotenv import load_dotenv
 from loguru import logger
+
 from src.bot import DirectorContainer
 
 load_dotenv("config/env/.env")
@@ -10,6 +12,7 @@ load_dotenv("config/env/.env")
 
 async def main():
     director = DirectorContainer.director()
+    # TODO: Add webhook
     logger.info("Start polling")
     await director.start()
 

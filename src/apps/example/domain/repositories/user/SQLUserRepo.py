@@ -1,6 +1,6 @@
+from src.apps.example.domain.entities import User
 from src.storages.db import Database
 
-from src.apps.example.domain.entities import User
 from .IUserRepo import IUserRepo
 
 

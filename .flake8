@@ -2,6 +2,7 @@
 extend-ignore = E203, B101
 per-file-ignores =
     src/apps/**/entities/*:VNE003
+    src/apps/**/tests/*: S101
 max-complexity = 10
 max-line-length = 120
 exclude = .git,__pycache__,deploy,config,logs,.github,.venv,.pytest_cache,.vscode,.idea,.editorConfig, src/storages/**/migrations

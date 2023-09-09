@@ -1,7 +1,7 @@
 from src.common import BaseService
 
-from ..domain.repositories import IUserRepo
 from ..domain.entities import User
+from ..domain.repositories import IUserRepo
 
 
 class UserService(BaseService[IUserRepo]):
