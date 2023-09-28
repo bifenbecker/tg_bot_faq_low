@@ -1,3 +1,5 @@
-from .example import ExampleContainer
+from .lawyer import LawyerContainer
 
-__all__ = ExampleContainer
+__all__ = (
+    "LawyerContainer",
+)

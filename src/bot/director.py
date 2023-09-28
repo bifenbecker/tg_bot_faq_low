@@ -21,7 +21,7 @@ class Director:
 
     async def startup(self):
         i18n = I18n(path=settings.dir.LOCALES, default_locale=settings.locale.DEFAULT, domain=settings.locale.DOMAIN)
-        self.__dispatcher.message.middleware(SimpleI18nMiddleware(i18n=i18n))
+        self.__dispatcher.message.outer_middleware(SimpleI18nMiddleware(i18n=i18n))
         await self.__bots[0].set_my_commands([
             BotCommand(command="/start", description="Start bot"),
         ])

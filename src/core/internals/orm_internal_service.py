@@ -7,7 +7,7 @@ class OrmInternalService(BaseImportService):
     # thus it adds them to Base.metadata
 
     TARGET_FOLDER = "apps"
-    TARGET_SUBFOLDERS = "entities"
+    TARGET_SUBFOLDERS = "models"
     METADATA_NOT_CHECKED_MESSAGE = "is not checked for metadata (migrations)"
     MODELS_NOT_CHECKED_MESSAGE = "is not checked for models (admin panel)"
 

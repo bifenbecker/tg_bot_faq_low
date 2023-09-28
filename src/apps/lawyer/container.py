@@ -5,10 +5,9 @@ from src.storages import Storages
 from .services import Services
 
 
-# {AppName}Container
-class ExampleContainer(containers.DeclarativeContainer):
+class LawyerContainer(containers.DeclarativeContainer):
     config = providers.Configuration()
 
-    storages = providers.Container(Storages, config=config.storages)
+    storages = providers.Container(Storages)
 
     services = providers.Container(Services, storages=storages)

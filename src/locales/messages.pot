@@ -1,0 +1,110 @@
+# Translations template for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-09-17 16:28+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: src/apps/lawyer/handlers/messages.py:23
+msgid "Наши услуги"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:23
+msgid "Запись на консультацию"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:27
+msgid ""
+"Полный спектр юридических услуг бизнесу, гражданам, а также "
+"некоммерческим организациям\n"
+"На рынке 36 лет!"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:38
+msgid ""
+"Авторская методика взыскания всех видов задолженности\n"
+"\n"
+"Ликвидация бизнеса\n"
+"\n"
+"Работа с ICO и IPO. Токены. Разработка смартконтрактов. Внесение "
+"криптовалюты в УФ\n"
+"\n"
+"Все виды строительных споров\n"
+"\n"
+"Легализация решений зарубежных судов\n"
+"\n"
+"Обжалование итогов проведения процедур закупок\n"
+"\n"
+"Разработка и экспертиза документов\n"
+"\n"
+"Правовая поддержка международных перевозчиков и экспедиторов\n"
+"\n"
+"Все виды претензионно–исковой работы\n"
+"\n"
+"Абонентское обслуживание юрлиц и ИП\n"
+"\n"
+"Лицензии, Аттестация, Сертификация\n"
+"Регистрация товарного знака | знака обслуживания\n"
+"\n"
+"Открытие бизнеса под ключ\n"
+"\n"
+"Кадровое делопроизводство\n"
+"\n"
+"Аудит\n"
+"\n"
+"Полный спектр работ с коммерческой недвижимостью\n"
+"\n"
+"Правовое сопровождение всего процесса строительства\n"
+"\n"
+"Апостилизация, легализация документов в МИД, перевод, нотариальное "
+"заверение под ключ\n"
+"\n"
+"Сопровождение сделок в корпоративном праве\n"
+"\n"
+"Получение разрешений на размещение реклам/вывесок\n"
+"\n"
+"Все виды в сфере трудовой миграции\n"
+"\n"
+"Взыскание алиментов"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:88
+msgid "Ваше имя"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:96
+msgid "Номер телефона"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:98
+msgid "Поделиться телефоном"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:107
+msgid "Ваш вопрос"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:114
+msgid "Укажите удобное для вас время"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:128
+msgid "Не удалось оставить заявку"
+msgstr ""
+
+#: src/apps/lawyer/handlers/messages.py:130
+msgid "Ваша форма заполнена и сохранена!"
+msgstr ""
+

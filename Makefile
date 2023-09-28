@@ -24,14 +24,14 @@ pgb-update:
 	docker secret rm pg_bouncer_auth_file
 	docker secret create pg_bouncer_auth_file ./deploy/pb_bouncer_auth_file.txt
 
-init-loc:
-	pienv run pybabel extract --input-dirs=${DIR__APPS} -o ${DIR__LOCALES}/${LOCALE__DOMAIN}.pot
+lang-extract:
+	pipenv run pybabel extract --input-dirs=${DIR__APPS} -o ${DIR__LOCALES}/${LOCALE__DOMAIN}.pot
 
-init-lang:
+lang-init:
 	pipenv run pybabel init -i ${DIR__LOCALES}/${LOCALE__DOMAIN}.pot -d ${DIR__LOCALES} -D ${LOCALE__DOMAIN} -l $(l)
 
-compile-lang:
-	pipenv run pybabel compile -d ${DIR__LOCALES} -D ${LOCALE__DOMAIN}
+lang-compile:
+	pipenv run pybabel compile -d ${DIR__LOCALES} -D ${LOCALE__DOMAIN} -l $(l)
 
-update-lang:
-	pipenv run pybabel update -d ${DIR__LOCALES} -D ${LOCALE__DOMAIN} -i ${DIR__LOCALES}/${LOCALE__DOMAIN}.pot
+lang-update:
+	pipenv run pybabel update -d ${DIR__LOCALES} -D ${LOCALE__DOMAIN} -i ${DIR__LOCALES}/${LOCALE__DOMAIN}.pot -l $(l)
